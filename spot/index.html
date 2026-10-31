@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>VYRA One — Spot 30s</title>
+<style>
+  html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#000}
+  #stage{position:absolute;inset:0}
+  canvas{display:block}
+  #ui{position:absolute;inset:0;pointer-events:none;font-family:"Inter Display","Inter",sans-serif;color:#fff;-webkit-font-smoothing:antialiased}
+  .t{position:absolute;white-space:nowrap;will-change:transform,opacity,filter}
+  .w{display:inline-block;will-change:transform,opacity,filter}
+  .grad{background:linear-gradient(100deg,#b9a6ff 0%,#7c5cff 35%,#22d3ff 75%,#a5f3ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .eyebrow{font-weight:500;font-size:26px;letter-spacing:.42em;text-transform:uppercase;color:#cfd3dc}
+  .h1{font-weight:600;font-size:118px;letter-spacing:-.035em;line-height:1}
+  .h2{font-weight:600;font-size:84px;letter-spacing:-.03em;line-height:1.02}
+  .spec{font-weight:300;font-size:34px;letter-spacing:.02em;color:#c9ced8}
+  .num{font-weight:700;font-size:250px;letter-spacing:-.06em;line-height:.9;font-variant-numeric:tabular-nums}
+  .unit{font-weight:500;font-size:64px;letter-spacing:-.02em}
+  .bar{position:absolute;height:4px;border-radius:2px;background:rgba(255,255,255,.14);overflow:hidden}
+  .bar>i{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,#7c5cff,#22d3ff);box-shadow:0 0 18px #22d3ff}
+  .logo{font-weight:700;font-size:150px;letter-spacing:-.045em;line-height:1}
+  .logo b{font-weight:300}
+  .cta{font-weight:500;font-size:30px;letter-spacing:.28em;text-transform:uppercase}
+  .small{font-weight:400;font-size:24px;letter-spacing:.08em;color:#9aa1ad}
+  #flash{position:absolute;inset:0;background:#fff;opacity:0}
+  #letterbox{position:absolute;inset:0;pointer-events:none}
+</style>
+<script type="importmap">
+{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}
+</script>
+</head>
+<body>
+<div id="stage"></div>
+<div id="ui"></div>
+<div id="flash"></div>
+<script type="module" src="./scene.js"></script>
+</body>
+</html>
